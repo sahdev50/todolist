@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:linear-gradient(45deg, #e79258, #b632a4, #8810f8,#b632a4, #e79258);
+    background-size: 500%;
+    background-attachment: fixed;
+    animation: bg-animation 20s infinite alternate;
+    color:white;
+    font-family: 'poppins', sans-serif;
+}
+@keyframes bg-animation{
+    0%{
+        background-position: left;
+        }
+    100%{
+        background-position: right;
+        }
+}
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    font-size: 1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+::placeholder{
+    font-family: cursive, sans-serif;
+}
+form input,form button
+{
+    padding:15px 30px;
+    font-size: 1rem;
+    border: none;
+    background-color: white;
+}
+.todo-button{
+    cursor: pointer;
+    color: #2e70ff;
+    background-color: white;
+    transition: 0.3s ease-in;
+}
+.todo-button:hover
+{
+    color:white;
+    background-color:  #2e70ff;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width:30%;
+    list-style:none;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color:black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+.todo li{
+    flex: 1;
+}
+.trash-btn,
+.complete-btn{
+    color:white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease-in;
+}
+.complete-btn{
+    background: rgb(45, 218, 54);
+}
+.trash-btn{
+    background: rgb(245, 56, 56);
+}
+.complete-btn:hover{
+    color:rgb(45, 218, 54);
+    background-color:white;
+}
+.trash-btn:hover{
+    color: rgb(245, 56, 56);
+    background-color:white;
+}
+.todo-items{
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity:0;
+}
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+.select{
+    position: relative;
+    margin:1rem;
+    overflow: hidden;
+}
+select{
+    color: blueviolet;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content:"\25BC";
+    position: absolute;
+    background: blueviolet;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: white;
+    color:blueviolet;
+}
