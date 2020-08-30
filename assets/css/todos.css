@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    height:100vh;
     font-family: 'Roboto', sans-serif;
     background-image:linear-gradient(65deg,#d816ffc5, #6191f8c4, #d400ffb9,#f769a4ce);
     background-size: 500%;
